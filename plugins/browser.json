@@ -1,0 +1,40 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.quiktrak.anzacprotect"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "XXXXXXX",
+            "PACKAGE_NAME": "com.quiktrak.anzacprotect"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.quiktrak.anzacprotect"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.quiktrak.anzacprotect"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.quiktrak.anzacprotect"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.quiktrak.protect"
+        },
+        "cordova-plugin-buildinfo": {
+            "PACKAGE_NAME": "com.quiktrak.protect"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.quiktrak.protect"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.quiktrak.protect"
+        }
+    },
+    "dependent_plugins": {}
+}

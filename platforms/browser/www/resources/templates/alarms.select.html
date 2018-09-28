@@ -1,0 +1,95 @@
+
+<div class="page alarm_page" data-page="alarms.select">
+	<div class="navbar ">
+    	<div class="navbar-inner">
+    	  	<div class="left">
+    	  		<a href="#" class="back link"> <i class="icon icon-back"></i></a>
+    	  	</div>
+    		<div class="left navbar_title ">{{@global.LANGUAGE.MENU_MSG07}}</div>
+    		<div class="right">    			
+            	<a href="#" class="link saveAlarm"><i class="f7-icons">check</i></a>
+    		</div>
+    		          
+    	</div>    
+  	</div>
+
+  	<div class="page-content">  		
+  		
+        <input type="hidden" name="Assets" value="{{Assets}}">
+        <div class="list-block no-hairlines-between no-hairlines media-list alarm_list"> 
+                
+            <ul>
+                
+                <li class="item-content alarm_title">                                   
+                    <div class="item-inner">
+                        <div class="item-title-row">
+                            <div class="item-title ">{{@global.LANGUAGE.ALARM_MSG01}}</div>
+                            <div class="item-after">
+                                <label class="label-switch no-fastclick ">
+                                    <input type="checkbox" name="checkbox-alarm" {{#if Alarm}}checked="checked"{{/if}}>
+                                    <div class="checkbox"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>                  
+                </li>
+                <li >
+                    <label class="label-checkbox item-content no-fastclick " >
+                        <input type="checkbox" name="checkbox-bilge" value="131072" {{#if Bilge}}checked="checked"{{/if}}>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title">{{@global.LANGUAGE.ALARM_MSG02}}</div>
+                                <div class="item-after">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                </li>
+                <li >
+                    <label class="label-checkbox item-content no-fastclick " >
+                        <input type="checkbox" name="checkbox-power" value="4" {{#if Power}}checked="checked"{{/if}}>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title">{{@global.LANGUAGE.ALARM_MSG03}}</div>
+                                <div class="item-after">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                </li>
+                <li >
+                    <label class="label-checkbox item-content no-fastclick " >
+                        <input type="checkbox" name="checkbox-ignition" value="32768" {{#if Ignition}}checked="checked"{{/if}}>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title">{{@global.LANGUAGE.ALARM_MSG04}}</div>
+                                <div class="item-after">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                </li>
+                <li >
+                    <label class="label-checkbox item-content no-fastclick " >
+                        <input type="checkbox"  name="checkbox-geolock" value="1024" {{#if Geolock}}checked="checked"{{/if}}>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title">{{@global.LANGUAGE.ALARM_MSG05}}</div>
+                                <div class="item-after">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                </li>
+                
+            </ul>
+            
+        </div>
+		
+  	</div>
+	
+</div>
