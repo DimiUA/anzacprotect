@@ -127,9 +127,7 @@ function setupPush(){
             }
             else if (data && data.additionalData && data.additionalData.payload){
                //if user NOT using app and push notification comes
-                var container = $$('body');
-                if (container.children('.progressbar, .progressbar-infinite').length) return; //don't run all this if there is a current progressbar loading
-                App.showProgressbar(container); 
+                App.showIndicator();
                
                 loginTimer = setInterval(function() {
                     //alert(localStorage.notificationChecked);
@@ -138,7 +136,7 @@ function setupPush(){
                         setTimeout(function(){
                             //alert('before processClickOnPushNotification');
                             processClickOnPushNotification([data.additionalData.payload]);
-                            App.hideProgressbar();               
+                            App.hideIndicator();      
                         },1000); 
                     }
                 }, 1000); 
@@ -410,6 +408,27 @@ $$('body').on('click', '.routeButton', function(){
     }
     
 });
+
+/*$$('body').on('click', '.navbar_title ', function(){
+    //var payload = {};
+    //console.log('')
+    var payload = {
+        "type":"sms_received",
+        "alarm":"location",
+        "imsi":"43688875284305",
+        "AssetName":"Jack Da Roo",
+        "imei":"0352544071889449",
+        "messageReference":"c8e721a6-c549-4aa3-a940-0082bed7e0c5",
+        "state":"received",
+        "Lat":-32.03289,
+        "Lng":115.86833,
+        "positionTime":"2017-02-07T12:17:25",
+        "speed":"0.19",
+        "direct":"0.00"
+    };
+    //plus.push.createMessage("Welcome", payload, {cover:false} );
+    showMsgNotification([payload]);
+});*/
 
 
 $$('body').on('click', '#menu li', function () {

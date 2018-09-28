@@ -179,6 +179,24 @@ Helper ={
 
         return map;
     },
+    toDegreesMinutesAndSeconds: function (coordinate) {
+            var absolute = Math.abs(coordinate);
+            var degrees = Math.floor(absolute);
+            var minutesNotTruncated = (absolute - degrees) * 60;
+            var minutes = Math.floor(minutesNotTruncated);
+            var seconds = Math.floor((minutesNotTruncated - minutes) * 60);
+
+            return degrees + " " + minutes + " " + seconds;
+    },
+    convertDMS: function (lat, lng) {
+            var latitude = Helper.toDegreesMinutesAndSeconds(lat);
+            var latitudeCardinal = Math.sign(lat) >= 0 ? "N" : "S";
+
+            var longitude = Helper.toDegreesMinutesAndSeconds(lng);
+            var longitudeCardinal = Math.sign(lng) >= 0 ? "E" : "W";
+
+            return latitude + " " + latitudeCardinal + "\n" + longitude + " " + longitudeCardinal;
+    },
    getDistance:function(lat1,lng1,lat2,lng2){
          var f = getRad((lat1 + lat2)/2);
         var g = getRad((lat1 - lat2)/2);
